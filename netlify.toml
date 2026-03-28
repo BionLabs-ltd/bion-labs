@@ -1,0 +1,26 @@
+# Netlify configuration for Bion Labs
+# Docs: https://docs.netlify.com/configure-builds/file-based-configuration/
+
+[build]
+  publish = "."        # Serve from the root — no build step needed
+
+# Security headers applied to every page
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options         = "DENY"
+    X-XSS-Protection        = "1; mode=block"
+    X-Content-Type-Options  = "nosniff"
+    Referrer-Policy         = "strict-origin-when-cross-origin"
+
+# Cache static assets aggressively
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Custom 404 page (create 404.html when ready)
+# [[redirects]]
+#   from   = "/*"
+#   to     = "/404.html"
+#   status = 404
