@@ -3,149 +3,154 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Bion Labs — Performance Peptides & Health Products</title>
+  <title>Bion Labs — Research Peptides & Health Products</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy: {
+              50:  '#edf0f7',
+              100: '#d2d9ee',
+              200: '#a5b3dd',
+              300: '#7890cc',
+              400: '#4b6dbb',
+              500: '#2e53a8',
+              600: '#234094',
+              700: '#1B3A7A',
+              800: '#142d61',
+              900: '#0e2049',
+            },
+            pink: {
+              500: '#E0267A',
+              600: '#c61f6a',
+            },
+          }
+        }
+      }
+    }
+  </script>
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
     body { font-family: 'Inter', sans-serif; }
   </style>
 </head>
 <body class="bg-white text-gray-900">
 
-  <!-- Navigation -->
-  <nav class="fixed top-0 w-full bg-white/90 backdrop-blur-sm border-b border-gray-100 z-50">
-    <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-      <a href="#" class="text-xl font-semibold tracking-tight">Bion<span class="text-teal-600">Labs</span></a>
+  <!-- NAVIGATION -->
+  <nav class="fixed top-0 w-full bg-white/95 backdrop-blur-sm border-b border-gray-100 z-50">
+    <div class="max-w-6xl mx-auto px-6 py-3 flex items-center justify-between">
+      <a href="#"><img src="assets/images/logo.png" alt="Bion Labs" class="h-12 w-auto object-contain" /></a>
       <div class="hidden md:flex items-center gap-8 text-sm text-gray-600">
-        <a href="#products" class="hover:text-gray-900 transition">Products</a>
-        <a href="#about" class="hover:text-gray-900 transition">About</a>
-        <a href="#faq" class="hover:text-gray-900 transition">FAQ</a>
+        <a href="#products" class="hover:text-navy-700 transition font-medium">Products</a>
+        <a href="#about" class="hover:text-navy-700 transition font-medium">About</a>
+        <a href="#faq" class="hover:text-navy-700 transition font-medium">FAQ</a>
       </div>
-      <a href="#products" class="bg-teal-600 text-white text-sm px-4 py-2 rounded-lg hover:bg-teal-700 transition">
-        Shop Now
-      </a>
+      <a href="#products" class="bg-pink-500 text-white text-sm px-5 py-2.5 rounded-lg font-semibold hover:bg-pink-600 transition shadow-sm">Shop Now</a>
     </div>
   </nav>
 
-  <!-- Hero -->
-  <section class="pt-32 pb-24 px-6 max-w-6xl mx-auto text-center">
-    <span class="inline-block text-xs font-medium tracking-widest text-teal-600 uppercase mb-4">Research-Grade Quality</span>
-    <h1 class="text-5xl md:text-6xl font-bold tracking-tight leading-tight mb-6">
-      Precision peptides.<br class="hidden md:block" />
-      <span class="text-teal-600">Measurable results.</span>
+  <!-- HERO -->
+  <section class="pt-32 pb-20 px-6 max-w-6xl mx-auto text-center">
+    <div class="flex justify-center mb-12">
+      <img src="assets/images/logo.png" alt="Bion Labs" class="w-auto object-contain" style="max-height:200px;" />
+    </div>
+    <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight leading-tight mb-5 text-navy-900">
+      Precision peptides.<br class="hidden md:block"/>
+      <span class="text-pink-500">Measurable results.</span>
     </h1>
-    <p class="text-lg text-gray-500 max-w-xl mx-auto mb-10">
+    <p class="text-lg text-gray-500 max-w-xl mx-auto mb-10 leading-relaxed">
       Bion Labs sources and retails high-purity peptides and health compounds — formulated for performance, backed by science.
     </p>
     <div class="flex flex-col sm:flex-row gap-4 justify-center">
-      <a href="#products" class="bg-teal-600 text-white px-8 py-3 rounded-lg font-medium hover:bg-teal-700 transition">
-        Browse Products
-      </a>
-      <a href="#about" class="border border-gray-200 text-gray-700 px-8 py-3 rounded-lg font-medium hover:border-gray-400 transition">
-        Learn More
-      </a>
+      <a href="#products" class="bg-navy-700 text-white px-8 py-3.5 rounded-lg font-semibold hover:bg-navy-900 transition shadow-sm">Browse Products</a>
+      <a href="#about" class="border border-gray-200 text-gray-700 px-8 py-3.5 rounded-lg font-semibold hover:border-navy-700 hover:text-navy-700 transition">Learn More</a>
     </div>
   </section>
 
-  <!-- Trust Bar -->
-  <section class="border-y border-gray-100 py-8 px-6">
-    <div class="max-w-4xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-6 text-center text-sm text-gray-500">
-      <div>
-        <p class="text-2xl font-semibold text-gray-900 mb-1">99%+</p>
-        <p>Purity Verified</p>
-      </div>
-      <div>
-        <p class="text-2xl font-semibold text-gray-900 mb-1">3rd Party</p>
-        <p>Lab Tested</p>
-      </div>
-      <div>
-        <p class="text-2xl font-semibold text-gray-900 mb-1">Fast</p>
-        <p>Discreet Shipping</p>
-      </div>
-      <div>
-        <p class="text-2xl font-semibold text-gray-900 mb-1">Expert</p>
-        <p>Customer Support</p>
-      </div>
+  <!-- TRUST BAR -->
+  <section class="py-8 px-6" style="background:#0e2049;">
+    <div class="max-w-4xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+      <div><p class="text-2xl font-bold mb-1" style="color:#E0267A;">99%+</p><p class="text-gray-300 text-xs tracking-wide uppercase font-medium">Purity Verified</p></div>
+      <div><p class="text-2xl font-bold mb-1" style="color:#E0267A;">3rd Party</p><p class="text-gray-300 text-xs tracking-wide uppercase font-medium">Lab Tested</p></div>
+      <div><p class="text-2xl font-bold mb-1" style="color:#E0267A;">Fast</p><p class="text-gray-300 text-xs tracking-wide uppercase font-medium">Discreet Shipping</p></div>
+      <div><p class="text-2xl font-bold mb-1" style="color:#E0267A;">Expert</p><p class="text-gray-300 text-xs tracking-wide uppercase font-medium">Customer Support</p></div>
     </div>
   </section>
 
-  <!-- Products -->
+  <!-- PRODUCTS -->
   <section id="products" class="py-24 px-6 max-w-6xl mx-auto">
-    <h2 class="text-3xl font-bold mb-2">Our Products</h2>
-    <p class="text-gray-500 mb-12">A curated selection of research-grade peptides and health compounds.</p>
-
+    <div class="mb-12">
+      <span class="text-xs font-semibold tracking-[0.2em] uppercase" style="color:#E0267A;">Our Range</span>
+      <h2 class="text-3xl font-extrabold mt-2" style="color:#1B3A7A;">Research Peptides</h2>
+      <p class="text-gray-500 mt-2">A curated selection of research-grade peptides and health compounds.</p>
+    </div>
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
 
-      <!-- Product Card 1 -->
-      <div class="border border-gray-100 rounded-2xl p-6 hover:shadow-md transition group">
-        <div class="bg-teal-50 rounded-xl h-40 mb-5 flex items-center justify-center">
-          <span class="text-4xl">🧬</span>
+      <div class="border border-gray-100 rounded-2xl p-6 hover:shadow-lg transition">
+        <div class="rounded-xl h-40 mb-5 flex items-center justify-center" style="background:#edf0f7;">
+          <img src="assets/images/logo.png" alt="Bion Labs" class="h-16 w-auto object-contain opacity-80" />
         </div>
-        <span class="text-xs font-medium text-teal-600 uppercase tracking-wide">Recovery</span>
-        <h3 class="text-lg font-semibold mt-1 mb-2">BPC-157</h3>
-        <p class="text-sm text-gray-500 mb-4">A pentadecapeptide known for its tissue-healing and gut-repair properties.</p>
+        <span class="text-xs font-semibold uppercase tracking-wide" style="color:#E0267A;">Recovery</span>
+        <h3 class="text-lg font-bold mt-1 mb-2" style="color:#1B3A7A;">BPC-157</h3>
+        <p class="text-sm text-gray-500 mb-5 leading-relaxed">A pentadecapeptide known for its tissue-healing and gut-repair properties.</p>
         <div class="flex items-center justify-between">
-          <span class="text-lg font-bold">$59.00</span>
-          <a href="#" class="bg-teal-600 text-white text-sm px-4 py-2 rounded-lg hover:bg-teal-700 transition">Buy</a>
+          <span class="text-xl font-bold" style="color:#1B3A7A;">$59.00</span>
+          <a href="#" class="text-white text-sm px-4 py-2 rounded-lg font-medium" style="background:#1B3A7A;" onmouseover="this.style.background='#E0267A'" onmouseout="this.style.background='#1B3A7A'">Buy Now</a>
         </div>
       </div>
 
-      <!-- Product Card 2 -->
-      <div class="border border-gray-100 rounded-2xl p-6 hover:shadow-md transition group">
-        <div class="bg-indigo-50 rounded-xl h-40 mb-5 flex items-center justify-center">
-          <span class="text-4xl">💉</span>
+      <div class="border border-gray-100 rounded-2xl p-6 hover:shadow-lg transition">
+        <div class="rounded-xl h-40 mb-5 flex items-center justify-center" style="background:#fce7f1;">
+          <img src="assets/images/logo.png" alt="Bion Labs" class="h-16 w-auto object-contain opacity-80" />
         </div>
-        <span class="text-xs font-medium text-indigo-600 uppercase tracking-wide">Growth</span>
-        <h3 class="text-lg font-semibold mt-1 mb-2">TB-500</h3>
-        <p class="text-sm text-gray-500 mb-4">Thymosin Beta-4 — widely studied for muscle repair and inflammation modulation.</p>
+        <span class="text-xs font-semibold uppercase tracking-wide" style="color:#1B3A7A;">Growth</span>
+        <h3 class="text-lg font-bold mt-1 mb-2" style="color:#1B3A7A;">TB-500</h3>
+        <p class="text-sm text-gray-500 mb-5 leading-relaxed">Thymosin Beta-4 — widely studied for muscle repair and inflammation modulation.</p>
         <div class="flex items-center justify-between">
-          <span class="text-lg font-bold">$74.00</span>
-          <a href="#" class="bg-teal-600 text-white text-sm px-4 py-2 rounded-lg hover:bg-teal-700 transition">Buy</a>
+          <span class="text-xl font-bold" style="color:#1B3A7A;">$74.00</span>
+          <a href="#" class="text-white text-sm px-4 py-2 rounded-lg font-medium" style="background:#1B3A7A;" onmouseover="this.style.background='#E0267A'" onmouseout="this.style.background='#1B3A7A'">Buy Now</a>
         </div>
       </div>
 
-      <!-- Product Card 3 -->
-      <div class="border border-gray-100 rounded-2xl p-6 hover:shadow-md transition group">
-        <div class="bg-amber-50 rounded-xl h-40 mb-5 flex items-center justify-center">
-          <span class="text-4xl">⚡</span>
+      <div class="border border-gray-100 rounded-2xl p-6 hover:shadow-lg transition">
+        <div class="rounded-xl h-40 mb-5 flex items-center justify-center" style="background:#edf0f7;">
+          <img src="assets/images/logo.png" alt="Bion Labs" class="h-16 w-auto object-contain opacity-80" />
         </div>
-        <span class="text-xs font-medium text-amber-600 uppercase tracking-wide">Performance</span>
-        <h3 class="text-lg font-semibold mt-1 mb-2">CJC-1295</h3>
-        <p class="text-sm text-gray-500 mb-4">A GHRH analogue that stimulates sustained growth hormone release.</p>
+        <span class="text-xs font-semibold uppercase tracking-wide" style="color:#E0267A;">Performance</span>
+        <h3 class="text-lg font-bold mt-1 mb-2" style="color:#1B3A7A;">CJC-1295</h3>
+        <p class="text-sm text-gray-500 mb-5 leading-relaxed">A GHRH analogue that stimulates sustained growth hormone release.</p>
         <div class="flex items-center justify-between">
-          <span class="text-lg font-bold">$89.00</span>
-          <a href="#" class="bg-teal-600 text-white text-sm px-4 py-2 rounded-lg hover:bg-teal-700 transition">Buy</a>
+          <span class="text-xl font-bold" style="color:#1B3A7A;">$89.00</span>
+          <a href="#" class="text-white text-sm px-4 py-2 rounded-lg font-medium" style="background:#1B3A7A;" onmouseover="this.style.background='#E0267A'" onmouseout="this.style.background='#1B3A7A'">Buy Now</a>
         </div>
       </div>
 
     </div>
   </section>
 
-  <!-- About -->
-  <section id="about" class="bg-gray-50 py-24 px-6">
+  <!-- ABOUT -->
+  <section id="about" class="py-24 px-6" style="background:#0e2049;">
     <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-16 items-center">
       <div>
-        <span class="text-xs font-medium tracking-widest text-teal-600 uppercase">About Bion Labs</span>
-        <h2 class="text-3xl font-bold mt-2 mb-5">Science-first. No compromises.</h2>
-        <p class="text-gray-500 leading-relaxed mb-4">
-          Bion Labs was founded with a single mission: make research-grade peptides accessible to people who take their health seriously. Every batch is third-party tested and certified for purity before it reaches you.
-        </p>
-        <p class="text-gray-500 leading-relaxed">
-          We work directly with accredited synthesis laboratories and maintain a strict quality control process so you always know exactly what you're getting.
-        </p>
+        <span class="text-xs font-semibold tracking-[0.2em] uppercase" style="color:#E0267A;">About Bion Labs</span>
+        <h2 class="text-3xl font-extrabold mt-2 mb-5 text-white">Science-first.<br/>No compromises.</h2>
+        <p class="leading-relaxed mb-4" style="color:#a5b3dd;">Bion Labs was founded with a single mission: make research-grade peptides accessible to people who take their health seriously. Every batch is third-party tested and certified for purity before it reaches you.</p>
+        <p class="leading-relaxed" style="color:#a5b3dd;">We work directly with accredited synthesis laboratories and maintain a strict quality control process so you always know exactly what you're getting.</p>
       </div>
       <div class="grid grid-cols-2 gap-4">
-        <div class="bg-white rounded-2xl p-6 text-center shadow-sm">
-          <p class="text-3xl font-bold text-teal-600 mb-1">COA</p>
-          <p class="text-sm text-gray-500">Certificate of Analysis on every product</p>
+        <div class="rounded-2xl p-6 text-center border" style="background:#142d61; border-color:#234094;">
+          <p class="text-3xl font-bold mb-1" style="color:#E0267A;">COA</p>
+          <p class="text-sm" style="color:#7890cc;">Certificate of Analysis on every product</p>
         </div>
-        <div class="bg-white rounded-2xl p-6 text-center shadow-sm">
-          <p class="text-3xl font-bold text-teal-600 mb-1">HPLC</p>
-          <p class="text-sm text-gray-500">Verified by high-performance liquid chromatography</p>
+        <div class="rounded-2xl p-6 text-center border" style="background:#142d61; border-color:#234094;">
+          <p class="text-3xl font-bold mb-1" style="color:#E0267A;">HPLC</p>
+          <p class="text-sm" style="color:#7890cc;">High-performance liquid chromatography verified</p>
         </div>
-        <div class="bg-white rounded-2xl p-6 text-center shadow-sm col-span-2">
-          <p class="text-3xl font-bold text-teal-600 mb-1">100%</p>
-          <p class="text-sm text-gray-500">Satisfaction guarantee — or we make it right</p>
+        <div class="rounded-2xl p-6 text-center col-span-2 border" style="background:#142d61; border-color:#234094;">
+          <p class="text-3xl font-bold mb-1" style="color:#E0267A;">100%</p>
+          <p class="text-sm" style="color:#7890cc;">Satisfaction guarantee — or we make it right</p>
         </div>
       </div>
     </div>
@@ -153,35 +158,37 @@
 
   <!-- FAQ -->
   <section id="faq" class="py-24 px-6 max-w-3xl mx-auto">
-    <h2 class="text-3xl font-bold mb-12 text-center">Frequently Asked Questions</h2>
-    <div class="space-y-6">
-      <div class="border border-gray-100 rounded-xl p-6">
-        <h3 class="font-semibold mb-2">Are these products safe to use?</h3>
-        <p class="text-sm text-gray-500">Our products are sold strictly for research purposes. Always consult a qualified healthcare provider before use.</p>
+    <span class="text-xs font-semibold tracking-[0.2em] uppercase" style="color:#E0267A;">Common Questions</span>
+    <h2 class="text-3xl font-extrabold mt-2 mb-12" style="color:#1B3A7A;">Frequently Asked Questions</h2>
+    <div class="space-y-4">
+      <div class="border border-gray-100 rounded-xl p-6 hover:border-gray-200 transition">
+        <h3 class="font-bold mb-2" style="color:#1B3A7A;">Are these products safe to use?</h3>
+        <p class="text-sm text-gray-500 leading-relaxed">Our products are sold strictly for research purposes. Always consult a qualified healthcare provider before use.</p>
       </div>
-      <div class="border border-gray-100 rounded-xl p-6">
-        <h3 class="font-semibold mb-2">How do I verify purity?</h3>
-        <p class="text-sm text-gray-500">Every product ships with a Certificate of Analysis (COA) from an independent, accredited laboratory.</p>
+      <div class="border border-gray-100 rounded-xl p-6 hover:border-gray-200 transition">
+        <h3 class="font-bold mb-2" style="color:#1B3A7A;">How do I verify purity?</h3>
+        <p class="text-sm text-gray-500 leading-relaxed">Every product ships with a Certificate of Analysis (COA) from an independent, accredited laboratory.</p>
       </div>
-      <div class="border border-gray-100 rounded-xl p-6">
-        <h3 class="font-semibold mb-2">What is your shipping policy?</h3>
-        <p class="text-sm text-gray-500">Orders ship within 1–2 business days in discreet, temperature-controlled packaging. We currently ship within the US.</p>
+      <div class="border border-gray-100 rounded-xl p-6 hover:border-gray-200 transition">
+        <h3 class="font-bold mb-2" style="color:#1B3A7A;">What is your shipping policy?</h3>
+        <p class="text-sm text-gray-500 leading-relaxed">Orders ship within 1-2 business days in discreet, temperature-controlled packaging.</p>
       </div>
-      <div class="border border-gray-100 rounded-xl p-6">
-        <h3 class="font-semibold mb-2">What payment methods do you accept?</h3>
-        <p class="text-sm text-gray-500">We accept all major credit and debit cards, processed securely through Stripe.</p>
+      <div class="border border-gray-100 rounded-xl p-6 hover:border-gray-200 transition">
+        <h3 class="font-bold mb-2" style="color:#1B3A7A;">What payment methods do you accept?</h3>
+        <p class="text-sm text-gray-500 leading-relaxed">We accept all major credit and debit cards, processed securely through Stripe.</p>
       </div>
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer class="border-t border-gray-100 py-10 px-6">
-    <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-gray-400">
-      <p>© 2026 Bion Labs. All rights reserved.</p>
+  <!-- FOOTER -->
+  <footer class="border-t py-10 px-6" style="background:#0e2049; border-color:#142d61;">
+    <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
+      <img src="assets/images/logo.png" alt="Bion Labs" class="h-10 w-auto object-contain brightness-0 invert" />
+      <p class="text-xs" style="color:#4b6dbb;">© 2026 Bion Labs. All rights reserved.</p>
       <div class="flex gap-6">
-        <a href="#" class="hover:text-gray-600 transition">Privacy Policy</a>
-        <a href="#" class="hover:text-gray-600 transition">Terms of Use</a>
-        <a href="#" class="hover:text-gray-600 transition">Contact</a>
+        <a href="#" class="text-xs" style="color:#4b6dbb;">Privacy Policy</a>
+        <a href="#" class="text-xs" style="color:#4b6dbb;">Terms of Use</a>
+        <a href="#" class="text-xs" style="color:#4b6dbb;">Contact</a>
       </div>
     </div>
   </footer>
