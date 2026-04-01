@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bion Labs — Hero Preview</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Inter', sans-serif; }
+
+    .slide-container {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .slide {
+      position: absolute;
+      inset: 0;
+      background-size: cover;
+      background-position: center;
+      opacity: 0;
+      transition: opacity 2s ease-in-out;
+      animation: slowZoom 14s ease-in-out infinite alternate;
+    }
+    .slide.active { opacity: 1; }
+
+    @keyframes slowZoom {
+      from { transform: scale(1.0); }
+      to   { transform: scale(1.07); }
+    }
+
+    /* Light overlay — lets the bright images show through */
+    .slide-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        135deg,
+        rgba(255,255,255,0.55) 0%,
+        rgba(240,245,255,0.30) 40%,
+        rgba(224,235,255,0.50) 100%
+      );
+      z-index: 2;
+    }
+
+    /* Bottom fade to white so page flows naturally */
+    .slide-fade-bottom {
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 220px;
+      background: linear-gradient(to bottom, transparent, rgba(255,255,255,0.95));
+      z-index: 3;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 4;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 0 24px;
+    }
+
+    .dots {
+      position: absolute;
+      bottom: 28px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 5;
+      display: flex;
+      gap: 10px;
+    }
+    .dot {
+      width: 8px; height: 8px;
+      border-radius: 50%;
+      background: rgba(27,58,122,0.25);
+      transition: background 0.3s;
+      cursor: pointer;
+    }
+    .dot.active { background: #E0267A; }
+
+    .badge {
+      display: inline-block;
+      background: rgba(224,38,122,0.10);
+      border: 1px solid rgba(224,38,122,0.3);
+      color: #E0267A;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      padding: 6px 16px;
+      border-radius: 100px;
+      margin-bottom: 24px;
+    }
+
+    .pink-line {
+      width: 52px; height: 3px;
+      background: #E0267A;
+      border-radius: 2px;
+      margin: 0 auto 28px;
+    }
+  </style>
+</head>
+<body style="background:white;">
+
+<div class="slide-container">
+
+  <!-- Slides: light blue molecular balls / wireframe molecule / colorful chromosome -->
+  <div class="slide active"
+       style="background-image:url('https://images.unsplash.com/photo-1655993810480-c15dccf9b3a0?auto=format&fit=crop&w=1920&q=90');">
+  </div>
+
+  <div class="slide"
+       style="background-image:url('https://images.unsplash.com/photo-1681911046068-79bd605f8663?auto=format&fit=crop&w=1920&q=90');">
+  </div>
+
+  <!-- Light overlay -->
+  <div class="slide-overlay"></div>
+  <!-- Bottom fade -->
+  <div class="slide-fade-bottom"></div>
+
+  <!-- Hero content -->
+  <div class="hero-content">
+
+    <img src="assets/images/logo.png2.png" alt="Bion Labs"
+         style="height:150px; width:auto; object-fit:contain; margin-bottom:32px;
+                filter: drop-shadow(0 2px 16px rgba(27,58,122,0.18));" />
+
+    <div class="pink-line"></div>
+
+    <div class="badge">Research-Grade Peptides</div>
+
+    <h1 style="font-size: clamp(2rem, 5vw, 3.8rem); font-weight:900; color:#1B3A7A;
+               line-height:1.12; margin-bottom:18px; letter-spacing:-0.5px;
+               text-shadow: 0 1px 8px rgba(255,255,255,0.8);">
+      Precision peptides.<br/>
+      <span style="color:#E0267A;">Measurable results.</span>
+    </h1>
+
+    <p style="font-size:17px; color:#2E6EB4; max-width:500px; line-height:1.7;
+              margin-bottom:40px; font-weight:500;
+              text-shadow: 0 1px 4px rgba(255,255,255,0.9);">
+      High-purity peptides and health compounds — formulated for performance, backed by science.
+    </p>
+
+    <div style="display:flex; gap:14px; flex-wrap:wrap; justify-content:center;">
+      <a href="#" style="background:#1B3A7A; color:white; padding:14px 36px;
+                         border-radius:8px; font-weight:700; font-size:15px;
+                         text-decoration:none; box-shadow:0 4px 16px rgba(27,58,122,0.25);">
+        Browse Products
+      </a>
+      <a href="#" style="background:rgba(255,255,255,0.85); color:#1B3A7A;
+                         border:2px solid #1B3A7A; padding:12px 36px;
+                         border-radius:8px; font-weight:600; font-size:15px;
+                         text-decoration:none; backdrop-filter:blur(4px);">
+        Learn More
+      </a>
+    </div>
+  </div>
+
+  <!-- Dots -->
+  <div class="dots" id="dots"></div>
+</div>
+
+<!-- Rest of page flows below -->
+<div style="height:80px; background:white;"></div>
+
+<script>
+  const slides = document.querySelectorAll('.slide');
+  const dotsEl = document.getElementById('dots');
+  let current = 0, timer;
+
+  slides.forEach((_, i) => {
+    const d = document.createElement('div');
+    d.className = 'dot' + (i===0?' active':'');
+    d.onclick = () => goTo(i);
+    dotsEl.appendChild(d);
+  });
+
+  function goTo(n) {
+    slides[current].classList.remove('active');
+    dotsEl.children[current].classList.remove('active');
+    current = (n + slides.length) % slides.length;
+    slides[current].classList.add('active');
+    dotsEl.children[current].classList.add('active');
+    clearInterval(timer);
+    timer = setInterval(() => goTo(current+1), 5500);
+  }
+
+  timer = setInterval(() => goTo(current+1), 5500);
+</script>
+
+</body>
+</html>
